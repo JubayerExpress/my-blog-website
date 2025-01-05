@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Shelf</title>
+    <title>Book Shelf</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -11,14 +11,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Book Shelf</a>
+                <a href="#">Book Shelf</a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="authors.html">Authors</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#authors">Authors</a></li>
             </ul>
             <button class="menu-button">☰</button> <!-- Mobile menu toggle button -->
         </nav>
@@ -26,6 +26,60 @@
 
     <!-- Main Content Section -->
     <main>
+        <!-- Books Section -->
+        <section id="books" class="books-section">
+            <h2 class="section-title">Books</h2>
+            <div class="filter">
+                <select id="book-genre" class="filter-select">
+                    <option value="">All Genres</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+            </div>
+            <div class="book-container">
+                <article class="book-card fiction">
+                    <img src="assets/images/book1.jpg" alt="Book 1">
+                    <div class="book-info">
+                        <h3 class="book-title"><a href="posts/book1.html" class="book-link">The Great Adventure</a></h3>
+                        <p>This book takes you on an unforgettable journey...</p>
+                    </div>
+                </article>
+                <article class="book-card science">
+                    <img src="assets/images/book2.jpg" alt="Book 2">
+                    <div class="book-info">
+                        <h3 class="book-title"><a href="posts/book2.html" class="book-link">Understanding the Universe</a></h3>
+                        <p>Delve into the mysteries of the cosmos...</p>
+                    </div>
+                </article>
+                <!-- More books here -->
+            </div>
+        </section>
+
+        <!-- Authors Section -->
+        <section id="authors" class="authors-section">
+            <h2 class="section-title">Authors</h2>
+            <div class="author-container">
+                <article class="author-card">
+                    <h3>Writers</h3>
+                    <ul>
+                        <li><a href="authors/writer1.html">Author 1</a></li>
+                        <li><a href="authors/writer2.html">Author 2</a></li>
+                    </ul>
+                </article>
+                <article class="author-card">
+                    <h3>Poets</h3>
+                    <ul>
+                        <li><a href="authors/poet1.html">Poet 1</a></li>
+                        <li><a href="authors/poet2.html">Poet 2</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Section (Latest Posts) -->
         <section id="blog" class="blog-section">
             <h2 class="section-title">Latest Posts</h2>
             <div class="blog-container">
@@ -36,19 +90,13 @@
                         <p>This post explores the latest trends in technology...</p>
                     </div>
                 </article>
-                <article class="blog-card blog-preview">
-                    <img src="assets/images/blog2.jpg" alt="Blog 2">
-                    <div class="blog-info">
-                        <h3 class="blog-title"><a href="posts/post2.html" class="blog-link">The Future of AI</a></h3>
-                        <p>In this post, we discuss the future applications of AI...</p>
-                    </div>
-                </article>
+                <!-- More blog posts here -->
             </div>
         </section>
 
         <section id="about" class="about-section">
             <h2>About Me</h2>
-            <p>Welcome to Book Shelf, where I share my thoughts on literature, authors, and much more!</p>
+            <p>Welcome to Book Shelf, where I share my thoughts on books, authors, and everything in between!</p>
         </section>
     </main>
 
