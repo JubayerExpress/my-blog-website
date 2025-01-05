@@ -67,14 +67,14 @@ main {
 }
 
 .blog-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
 .blog-card {
-    width: 45%;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -95,6 +95,10 @@ main {
 .blog-info {
     padding: 1.5rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .blog-info h3 {
@@ -105,6 +109,7 @@ main {
 .blog-info p {
     font-size: 1rem;
     color: #666;
+    text-align: justify;  /* Justified text */
 }
 
 .blog-info a {
@@ -162,7 +167,7 @@ footer p {
     }
 
     .blog-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
