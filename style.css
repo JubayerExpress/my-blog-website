@@ -58,7 +58,7 @@ body {
     background-image: url('bg-image.jpg'); /* Add a background image */
     background-size: cover;
     background-position: center;
-    color: #fff; /* Text color for better contrast */
+    color: #333; /* Set text color to black */ 
 }
 
 .container {
