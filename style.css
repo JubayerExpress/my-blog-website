@@ -31,11 +31,12 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Reduce gap between navigation items */
+    gap: 1rem; 
 }
 
 .nav-links li {
     display: inline;
+    margin: 0 0.5rem; /* Add margin to each list item */ 
 }
 
 .nav-links a {
@@ -218,4 +219,55 @@ p {
 form {
     max-width: 500px;
     margin: 0 auto;
-    margin-bottom:
+    margin-bottom: 30px; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-media {
+    text-align: center; /* Center social media icons */
+    margin-top: 30px; 
+}
+
+.social-media-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.social-media-list li {
+    margin-right: 20px; 
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 1.5rem; /* Increase icon size */
+}
