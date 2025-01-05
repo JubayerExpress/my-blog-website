@@ -82,18 +82,18 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem; /* Adjust font size for smaller screens */
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem; 
+    margin-bottom: 20px;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 20px; 
     background-color: #ff6347;
     color: #fff; 
     text-decoration: none;
@@ -110,6 +110,7 @@ p {
 }
 
 .post-preview h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */ 
     margin-bottom: 5px;
 }
 
@@ -156,11 +157,45 @@ p {
     .latest-posts-section {
         margin-top: 50px; 
     }
+
+    h1 {
+        font-size: 2rem; 
+    }
+
+    p {
+        font-size: 1rem; 
+    }
+
+    .post-preview h3 {
+        font-size: 1.2rem; 
+    }
 }
 
 /* About Section */
-/* ... (Your existing CSS) ... */
+.about-section {
+    padding-top: 50px; 
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 30px 20px; /* Adjust padding for smaller screens */
+    border-radius: 5px; /* Add rounded corners */
+}
 
+.about-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: #333; /* Set text color to black */
+}
+
+.about-facts {
+    background-color: #e6e6e6; /* Light gray background for facts */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text within the "Did you know?" section */
+}
+
+/* Contact Section */
 .contact-section {
     padding-top: 100px;
     text-align: center;
@@ -225,33 +260,6 @@ button[type="submit"] {
     text-decoration: none;
     color: #333; 
     font-size: 1.5rem; /* Increase icon size */
-}
-
-/* ... (Rest of your CSS) ... */
-
-/* ... (Your existing CSS) ... */
-
-.about-section {
-    padding-top: 100px;
-    text-align: center;
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 50px 0; /* Add padding to the section */
-    border-radius: 5px; /* Add rounded corners */
-}
-
-.about-content {
-    max-width: 800px; 
-    margin: 0 auto; 
-    color: #333; /* Set text color to black */
-}
-
-.about-facts {
-    background-color: #e6e6e6; /* Light gray background for facts */
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 30px; 
-    margin-bottom: 30px;
-    text-align: justify; /* Justify text within the "Did you know?" section */
 }
 
 /* ... (Rest of your CSS) ... */
