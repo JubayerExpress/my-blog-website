@@ -1,67 +1,97 @@
-/* Book and Author Sections */
-.books-section, .authors-section {
-    margin-top: 4rem;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2.5em;
+}
+
+/* Container and Layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* Columns for Home Page */
+.home-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-column {
+    width: 30%;
+}
+
+.home-column h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+/* Cards for Books, Authors, and Genres */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.filter {
-    margin-bottom: 2rem;
-}
-
-.filter-select {
-    padding: 10px;
-    font-size: 1.1rem;
-}
-
-.book-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.book-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s ease;
-}
-
-.book-card img {
+.card img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
+    border-radius: 8px;
+    height: auto;
 }
 
-.book-info {
-    padding: 1.5rem;
+.card h3 {
+    font-size: 1.4em;
+    margin-top: 10px;
 }
 
-.book-info a {
-    color: #ff6347;
+.card a {
     text-decoration: none;
+    color: #4CAF50;
 }
 
-.book-info a:hover {
-    color: #333;
+.card a:hover {
+    color: #45a049;
 }
 
-.author-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    text-align: left;
+.card p {
+    color: #555;
+    font-size: 1em;
 }
 
-/* Sorting Feature */
-.filter-select {
-    width: 200px;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .home-sections {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .book-container {
-        grid-template-columns: 1fr;
+    .home-column {
+        width: 100%;
+    }
+
+    header {
+        font-size: 2em;
     }
 }
