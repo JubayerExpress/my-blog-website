@@ -161,8 +161,8 @@ p {
     margin: 0 auto; 
     color: #333; /* Set text color to black */
 }
-/* ... (Your existing CSS for navigation bar, global styles, etc.) ... */
 
+/* Contact Section */
 .contact-section {
     padding-top: 100px;
     text-align: center;
@@ -211,12 +211,10 @@ button[type="submit"] {
 
 .social-media a {
     text-decoration: none;
-    color: #333;
+    color: #333; 
     margin-right: 20px;
 }
 
 .social-media a i {
     margin-right: 5px;
 }
-
-/* ... (Rest of your CSS) ... */
