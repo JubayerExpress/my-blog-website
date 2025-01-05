@@ -43,6 +43,8 @@ body {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
+    padding: 0.5rem 1rem; /* Add padding to navigation links */
+    border-radius: 3px; /* Add rounded corners */
 }
 
 .nav-links a:hover {
@@ -73,7 +75,7 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 960px; /* Adjust max-width for smaller screens */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -93,18 +95,18 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Slightly reduce font size */
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem; 
     margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 20px; 
     background-color: #ff6347;
     color: #fff; 
     text-decoration: none;
@@ -157,6 +159,7 @@ p {
     .container {
         flex-direction: column; 
         align-items: center; 
+        max-width: 80%; /* Adjust max-width for smaller screens */
     }
 
     .column.left {
