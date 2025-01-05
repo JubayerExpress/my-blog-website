@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authors - Book Shelf</title>
+    <title>Book Shelf - Authors</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -18,42 +17,42 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="books.html">Books</a></li>
-                <li><a href="authors.html">Authors</a></li>
+                <li><a href="authors.html" class="active">Authors</a></li> 
             </ul>
-            <button class="menu-button">☰</button> <!-- Mobile menu toggle button -->
+            <button class="menu-button">☰</button>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
         <section id="authors" class="authors-section">
-            <h2 class="section-title">Authors</h2>
-            <div class="author-container">
-                <article class="author-card">
-                    <img src="assets/images/author1.jpg" alt="Author 1">
-                    <div class="author-info">
-                        <h3 class="author-name"><a href="authors/author1.html">John Doe</a></h3>
-                        <p>John Doe is a fiction writer known for his philosophical works...</p>
-                    </div>
-                </article>
-                <article class="author-card">
-                    <img src="assets/images/author2.jpg" alt="Author 2">
-                    <div class="author-info">
-                        <h3 class="author-name"><a href="authors/author2.html">Jane Smith</a></h3>
-                        <p>Jane Smith is a science writer who has captivated readers...</p>
-                    </div>
-                </article>
+            <h2>Meet Our Authors</h2>
+            <div class="author-grid">
+                <div class="author-item">
+                    <img src="assets/images/author1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>Author of "The Silent Mind"</p>
+                    <a href="authors/author1.html" class="btn">View Profile</a>
+                </div>
+                <div class="author-item">
+                    <img src="assets/images/author2.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Author of "The Universe Within"</p>
+                    <a href="authors/author2.html" class="btn">View Profile</a>
+                </div>
+                <div class="author-item">
+                    <img src="assets/images/author3.jpg" alt="David Lee">
+                    <h3>David Lee</h3>
+                    <p>Author of "The Art of Storytelling"</p>
+                    <a href="authors/author3.html" class="btn">View Profile</a>
+                </div> 
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Book Shelf. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Book Shelf. All rights reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
