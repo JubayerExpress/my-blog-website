@@ -301,13 +301,16 @@ button[type="submit"] {
 }
 /* ... (Your existing CSS) ... */
 
+/* ... (Your existing CSS) ... */
+
 .books-section {
     padding-top: 100px;
-    text-align: center;
 }
 
 .filters {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between; 
 }
 
 .book-grid {
