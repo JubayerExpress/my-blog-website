@@ -1,67 +1,84 @@
-/* Book and Author Sections */
-.books-section, .authors-section {
-    margin-top: 4rem;
+/* Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2em;
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* Book List and Author List */
+.book-list, .author-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card for Books and Authors */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
     text-align: center;
 }
 
-.filter {
-    margin-bottom: 2rem;
+/* Book or Author Name */
+.card h3 {
+    font-size: 1.4em;
+    margin-top: 15px;
 }
 
-.filter-select {
-    padding: 10px;
-    font-size: 1.1rem;
+/* Card Description */
+.card p {
+    font-size: 1em;
+    color: #555;
 }
 
-.book-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.book-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s ease;
-}
-
-.book-card img {
+/* Card Image */
+.card img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
+    border-radius: 8px;
+    height: auto;
 }
 
-.book-info {
-    padding: 1.5rem;
-}
-
-.book-info a {
-    color: #ff6347;
+/* Link Button */
+.card a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.book-info a:hover {
-    color: #333;
-}
-
-.author-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    text-align: left;
-}
-
-/* Sorting Feature */
-.filter-select {
-    width: 200px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .book-container {
-        grid-template-columns: 1fr;
-    }
+/* Hover Effect for Link Button */
+.card a:hover {
+    background-color: #45a049;
 }
