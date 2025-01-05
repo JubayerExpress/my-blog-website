@@ -251,6 +251,7 @@ button[type="submit"] {
     border-radius: 5px;
     margin-top: 30px; 
     margin-bottom: 30px;
+    text-align: justify; /* Justify text within the "Did you know?" section */
 }
 
 /* ... (Rest of your CSS) ... */
