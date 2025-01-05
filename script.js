@@ -216,67 +216,73 @@ const books = [
 
 // Function to filter and sort books
 function filterAndSortBooks() {
-    const selectedGenre = genreFilter.value;
-    const selectedSort = sortOption.value;
+  const selectedGenre = genreFilter.value;
+  const selectedSort = sortOption.value;
 
-    let filteredBooks = books;
+  let filteredBooks = books.slice(); // Create a copy to avoid modifying original data
 
-    if (selectedGenre !== 'all') {
-        filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre);
-    }
+  if (selectedGenre !== 'all') {
+    filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre);
+  }
 
-    if (selectedSort === 'title') {
-        filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (selectedSort === 'author') {
-        filteredBooks.sort((a, b) => a.author.localeCompare(b.author));
-    }
+  if (selectedSort === 'title') {
+    filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (selectedSort === 'author') {
+    filteredBooks.sort((a, b) => a.author.localeCompare(b.author));
+  } else if (selectedSort === 'recent') {
+    // Assuming you have a `date` property in each book object for recent sorting
+    filteredBooks.sort((a, b) => new Date(b.date) - new Date(a.date));
+  }
 
-    // Update the UI with filtered and sorted books
-    updateBookGrid(filteredBooks);
+  // Update the UI with filtered and sorted books
+  updateBookGrid(filteredBooks);
 }
 
 // Function to update the book grid
 function updateBookGrid(books) {
-    bookGrid.innerHTML = ''; 
+  bookGrid.innerHTML = '';
 
-    books.forEach(book => {
-        const card = document.createElement('div');
-        card.classList.add('book-card');
+  books.forEach(book => {
+    const card = document.createElement('div');
+    card.classList.add('book-card');
 
-        const img = document.createElement('img');
-        img.src = book.image;
-        img.alt = book.title;
+    const img = document.createElement('img');
+    img.src = book.image;
+    img.alt = book.title;
 
-        const title = document.createElement('h3');
-        title.textContent = book.title;
+    const title = document.createElement('h3');
+    title.textContent = book.title;
 
-        const authorLink = document.createElement('a');
-        authorLink.href = book.authorPage;
-        authorLink.textContent = book.author;
+    const authorLink = document.createElement('a');
+    authorLink.href = book.authorPage;
+    authorLink.textContent = book.author;
 
-        const genre = document.createElement('p');
-        genre.textContent = `Genre: ${book.genre}`;
+    const genre = document.createElement('p');
+    genre.textContent = `Genre: ${book.genre}`;
 
-        const readMoreBtn = document.createElement('a');
-        readMoreBtn.href = `book-details.html?id=${book.id}`; 
-        readMoreBtn.classList.add('btn');
-        readMoreBtn.textContent = 'Read More';
+    const readMoreBtn = document.createElement('a');
+    readMoreBtn.href = `book-details.html?id=${book.id}`;
+    readMoreBtn.classList.add('btn');
+    readMoreBtn.textContent = 'Read More';
 
-        const readSummaryBtn = document.createElement('a');
-        readSummaryBtn.href = `summary.html?book=${book.id}`; 
-        readSummaryBtn.classList.add('btn');
-        readSummaryBtn.textContent = 'Read Summary';
+    const readSummaryBtn = document.createElement('a');
+    readSummaryBtn.href = `summary.html?book=${book.id}`;
+    readSummaryBtn.classList.add('btn');
+    readSummaryBtn.textContent = 'Read Summary';
 
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(authorLink); 
-        card.appendChild(genre);
-        card.appendChild(readMoreBtn);
-        card.appendChild(readSummaryBtn);
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(authorLink);
+    card.appendChild(genre);
+    card.appendChild(readMoreBtn);
+    card.appendChild(readSummaryBtn);
 
-        bookGrid.appendChild(card);
-    });
+    bookGrid.appendChild(card);
+  });
 }
+
+// Add sorting by recently added
+sortOption.innerHTML += '<option value="recent">Recently Added</option>';
 
 // Initial load
 filterAndSortBooks();
