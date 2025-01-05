@@ -5,7 +5,157 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 999; 
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem; /* Add some space from logo */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Home Section */
+.home-section {
+    padding-top: 100px; /* Adjust for sticky navbar */
+    min-height: 100vh; /* Make the section take up full viewport height */
+    display: flex;
+    align-items: center;
+    background-image: url('bg-image.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color for better contrast */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center content vertically */
+}
+
+.column {
+    width: 45%;
+}
+
+.column.left {
+    margin-right: 30px;
+}
+
+.column.right {
+    margin-left: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f05032;
+}
+
+.post-preview {
+    margin-bottom: 20px;
+}
+
+.post-preview h3 {
+    margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        padding: 1rem;
+        border-radius: 5px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .home-section {
+        text-align: center; 
+        padding-top: 80px; 
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+        margin: 0; 
+    }
+}
 /* Navigation Bar */
 /* (Same as before) */
 
