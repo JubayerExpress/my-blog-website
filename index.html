@@ -3,59 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewShelf - Home</title>
+    <title>Book Shelf - Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        ReviewShelf - Explore Books, Authors & More
+        <nav class="navbar"> 
+            <div class="logo">
+                <a href="index.html">Book Shelf</a> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="authors.html">Authors</a></li>
+            </ul>
+            <button class="menu-button">☰</button>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="home-sections">
-            <!-- Books Column -->
-            <section class="home-column">
-                <h2>Featured Books</h2>
-                <div class="card">
-                    <img src="assets/images/book1.jpg" alt="The Silent Mind">
-                    <h3><a href="books/book1.html">The Silent Mind</a></h3>
+    <main>
+        <section id="home" class="home-section">
+            <h1>Welcome to Book Shelf</h1>
+            <p>Discover a world of stories, explore diverse genres, and connect with inspiring authors.</p>
+            <a href="books.html" class="btn">Explore Books</a>
+        </section> 
+
+        <section id="featured"> 
+            <h2>Featured Books</h2>
+            <div class="book-grid">
+                <div class="book-item">
+                    <img src="assets/images/book1.jpg" alt="Book 1">
+                    <h3>The Silent Mind</h3>
                     <p>By John Doe</p>
+                    <a href="books/book1.html" class="btn">Read More</a>
                 </div>
-                <div class="card">
-                    <img src="assets/images/book2.jpg" alt="The Universe Within">
-                    <h3><a href="books/book2.html">The Universe Within</a></h3>
+                <div class="book-item"> 
+                    <img src="assets/images/book2.jpg" alt="Book 2">
+                    <h3>The Universe Within</h3>
                     <p>By Jane Smith</p>
+                    <a href="books/book2.html" class="btn">Read More</a>
                 </div>
-            </section>
+                </div>
+        </section>
+    </main>
 
-            <!-- Authors Column -->
-            <section class="home-column">
-                <h2>Featured Authors</h2>
-                <div class="card">
-                    <img src="assets/images/author1.jpg" alt="John Doe">
-                    <h3><a href="authors/author1.html">John Doe</a></h3>
-                    <p>Psychological Fiction Author</p>
-                </div>
-                <div class="card">
-                    <img src="assets/images/author2.jpg" alt="Jane Smith">
-                    <h3><a href="authors/author2.html">Jane Smith</a></h3>
-                    <p>Philosophical Writer</p>
-                </div>
-            </section>
+    <footer>
+        <p>&copy; 2025 Book Shelf. All rights reserved.</p>
+    </footer>
 
-            <!-- Genres Column -->
-            <section class="home-column">
-                <h2>Explore Genres</h2>
-                <div class="card">
-                    <h3><a href="genre/fiction.html">Fiction</a></h3>
-                    <p>Dive into the world of storytelling.</p>
-                </div>
-                <div class="card">
-                    <h3><a href="genre/non-fiction.html">Non-Fiction</a></h3>
-                    <p>Learn from the real world.</p>
-                </div>
-            </section>
-        </div>
-    </div>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
