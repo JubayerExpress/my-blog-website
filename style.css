@@ -228,3 +228,29 @@ button[type="submit"] {
 }
 
 /* ... (Rest of your CSS) ... */
+
+/* ... (Your existing CSS) ... */
+
+.about-section {
+    padding-top: 100px;
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 50px 0; /* Add padding to the section */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.about-content {
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: #333; /* Set text color to black */
+}
+
+.about-facts {
+    background-color: #e6e6e6; /* Light gray background for facts */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px; 
+    margin-bottom: 30px;
+}
+
+/* ... (Rest of your CSS) ... */
