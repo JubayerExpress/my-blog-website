@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Shelf - Authors</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -17,34 +18,38 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="books.html">Books</a></li>
-                <li><a href="authors.html" class="active">Authors</a></li> 
+                <li><a href="authors.html" class="active">Authors</a></li>
             </ul>
-            <button class="menu-button">☰</button>
         </nav>
     </header>
 
     <main>
         <section id="authors" class="authors-section">
-            <h2>Meet Our Authors</h2>
-            <div class="author-grid">
-                <div class="author-item">
-                    <img src="assets/images/author1.jpg" alt="John Doe">
-                    <h3>John Doe</h3>
-                    <p>Author of "The Silent Mind"</p>
-                    <a href="authors/author1.html" class="btn">View Profile</a>
+            <div class="container">
+                <h1>Authors</h1>
+
+                <div class="author-groups">
+                    <h2>Pre-2000</h2>
+                    <ul>
+                        <li><a href="author-details.html?id=1">Jane Austen</a></li>
+                        <li><a href="author-details.html?id=2">Charles Dickens</a></li>
+                        <li><a href="author-details.html?id=3">Mark Twain</a></li>
+                    </ul>
+
+                    <h2>2000-2015</h2>
+                    <ul>
+                        <li><a href="author-details.html?id=4">J.K. Rowling</a></li>
+                        <li><a href="author-details.html?id=5">Haruki Murakami</a></li>
+                        <li><a href="author-details.html?id=6">Chimamanda Ngozi Adichie</a></li>
+                    </ul>
+
+                    <h2>2015-Present</h2>
+                    <ul>
+                        <li><a href="author-details.html?id=7">Sally Rooney</a></li>
+                        <li><a href="author-details.html?id=8">Ocean Vuong</a></li>
+                        <li><a href="author-details.html?id=9">Tommy Orange</a></li>
+                    </ul>
                 </div>
-                <div class="author-item">
-                    <img src="assets/images/author2.jpg" alt="Jane Smith">
-                    <h3>Jane Smith</h3>
-                    <p>Author of "The Universe Within"</p>
-                    <a href="authors/author2.html" class="btn">View Profile</a>
-                </div>
-                <div class="author-item">
-                    <img src="assets/images/author3.jpg" alt="David Lee">
-                    <h3>David Lee</h3>
-                    <p>Author of "The Art of Storytelling"</p>
-                    <a href="authors/author3.html" class="btn">View Profile</a>
-                </div> 
             </div>
         </section>
     </main>
@@ -53,6 +58,6 @@
         <p>&copy; 2025 Book Shelf. All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
