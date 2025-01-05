@@ -214,6 +214,41 @@ form {
     margin-bottom: 30px; 
 }
 
+
+/* ... (Your existing CSS) ... */
+
+.authors-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.author-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.author-groups h2 {
+    margin-bottom: 15px;
+}
+
+.author-groups ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.author-groups li {
+    margin-bottom: 10px;
+}
+
+.author-details-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* ... (Rest of your CSS) ... */
 .form-group {
     margin-bottom: 20px;
 }
