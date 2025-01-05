@@ -1,97 +1,182 @@
 /* Global Styles */
-* {
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
+    background-color: #fafafa;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header Styles */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 2.5em;
-}
-
-/* Container and Layout */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-/* Columns for Home Page */
-.home-sections {
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.home-column {
-    width: 30%;
-}
-
-.home-column h2 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-}
-
-/* Cards for Books, Authors, and Genres */
-.card {
-    background-color: white;
-    border-radius: 10px;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Main Content */
+main {
+    padding: 4rem 8%;
+}
+
+/* Blog Section */
+.blog-section {
+    margin-top: 4rem;
     text-align: center;
 }
 
-.card img {
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-card img {
     width: 100%;
-    border-radius: 8px;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
 }
 
-.card h3 {
-    font-size: 1.4em;
-    margin-top: 10px;
+.blog-info {
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.card a {
+.blog-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog-info p {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify;  /* Justified text */
+}
+
+.blog-info a {
+    color: #ff6347;
     text-decoration: none;
-    color: #4CAF50;
 }
 
-.card a:hover {
-    color: #45a049;
+.blog-info a:hover {
+    text-decoration: underline;
 }
 
-.card p {
-    color: #555;
-    font-size: 1em;
+/* About Section */
+.about-section {
+    margin-top: 5rem;
+    background-color: #f4f4f4;
+    padding: 3rem 5%;
+    border-radius: 8px;
+    text-align: center;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .home-sections {
-        flex-direction: column;
-        align-items: center;
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
     }
 
-    .home-column {
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .blog-card {
         width: 100%;
     }
 
-    header {
-        font-size: 2em;
+    .cta-btn {
+        font-size: 1rem;
+        padding: 0.6rem 2rem;
     }
 }
