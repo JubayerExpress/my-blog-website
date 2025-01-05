@@ -1,9 +1,9 @@
-// app.js - JavaScript File for Optional Interactivity
+// app.js - JavaScript for Advanced Interactivity
 
-// Example 1: Scroll to Top Button
+// Scroll to Top Button
 const scrollToTopButton = document.querySelector('.scroll-to-top');
 
-// Show or hide the button based on scroll position
+// Show the button after scrolling 200px
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
         scrollToTopButton.style.display = 'block';
@@ -12,5 +12,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add event listener to scroll to the top when clicked
-scrollToTopButton.addEventListener('click', () =>
+// Scroll to Top functionality
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Toggle Navigation Menu for Mobile
+const menuButton = document.querySelector('.menu-button');
+const navLinks = document.querySelector('.nav-links');
+
+menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Dynamic Hover Effect for Blog Titles
+document.querySelectorAll('.blog-card').forEach(blog => {
+    blog.addEventListener('mouseover', () => {
+        const blogTitle = blog.querySelector('.blog-info h3');
+        blogTitle.style.color = '#ff6347';  // Highlight title
+    });
+    
+    blog.addEventListener('mouseout', () => {
+        const blogTitle = blog.querySelector('.blog-info h3');
+        blogTitle.style.color = '';  // Reset title color
+    });
+});
