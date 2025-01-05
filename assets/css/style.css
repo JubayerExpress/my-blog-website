@@ -1,1 +1,234 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Mobile Menu Button */
+.menu-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Main Content */
+main {
+    padding: 4rem 8%;
+}
+
+/* Blog Section */
+.blog-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: stretch;
+    align-items: stretch;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.blog-info {
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.blog-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog-info p {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify; /* Justified text */
+}
+
+.blog-info a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-info a:hover {
+    color: #333;
+}
+
+/* About Section */
+.about-section {
+    margin-top: 5rem;
+    background-color: #f4f4f4;
+    padding: 3rem 5%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+    background-color: #ff4500;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        display: none; /* Hide links on mobile by default */
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 0.6rem 2rem;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+}
 
