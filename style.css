@@ -149,3 +149,17 @@ p {
         margin: 0; 
     }
 }
+
+/* ... (Your existing CSS for navigation bar, global styles, etc.) ... */
+
+.about-section {
+    padding-top: 100px; /* Adjust for sticky navbar */
+    text-align: center; /* Center the content */
+}
+
+.about-content {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; 
+}
+
+/* ... (Rest of your CSS) ... */
