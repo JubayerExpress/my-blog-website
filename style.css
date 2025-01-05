@@ -77,8 +77,8 @@ body {
     margin-right: 30px;
 }
 
-.column.right {
-    margin-left: 30px;
+.latest-posts-section {
+    padding-top: 50px; /* Add some spacing */
 }
 
 h1 {
@@ -95,7 +95,7 @@ p {
     display: inline-block;
     padding: 12px 25px;
     background-color: #ff6347;
-    color: #665f5f;
+    color: #fff; 
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -143,10 +143,18 @@ p {
         padding-top: 80px; 
     }
 
-    .column {
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .column.left {
         width: 100%;
-        text-align: center;
-        margin: 0; 
+        margin: 0;
+    }
+
+    .latest-posts-section {
+        margin-top: 50px; 
     }
 }
 
