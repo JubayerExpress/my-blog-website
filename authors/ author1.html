@@ -3,43 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Author - Book Shelf</title>
+    <title>John Doe - Author</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../index.html">Book Shelf</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../books.html">Books</a></li>
-                <li><a href="../authors.html">Authors</a></li>
-            </ul>
-            <button class="menu-button">☰</button> <!-- Mobile menu toggle button -->
-        </nav>
+        ReviewShelf - John Doe
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <section id="author-details" class="author-details-section">
-            <h2 class="author-name">John Doe</h2>
-            <img src="../assets/images/author1.jpg" alt="John Doe">
-            <p>John Doe is a fiction writer known for his philosophical works...</p>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Book Shelf. All rights reserved.</p>
+    <div class="container">
+        <div class="card">
+            <img src="../assets/images/author1.jpg" alt="John Doe" class="author-img">
+            <h3>John Doe</h3>
+            <p>John Doe is a celebrated author known for his contributions to the world of psychological fiction. His works explore the intricacies of the human mind and consciousness.</p>
+            <p>John has been featured in numerous literary magazines and his works are acclaimed worldwide.</p>
+            <a href="#">Explore Books</a>
         </div>
-    </footer>
 
-    <script src="../app.js"></script>
+        <div class="card">
+            <h3>Books by John Doe</h3>
+            <ul>
+                <li><a href="../books/book1.html">The Silent Mind</a></li>
+                <li><a href="../books/book2.html">The Universe Within</a></li>
+                <!-- Add more books here -->
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
