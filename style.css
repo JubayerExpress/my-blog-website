@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333; /* Default text color */
 }
 
 /* Navigation Bar */
@@ -58,7 +58,7 @@ body {
     background-image: url('bg-image.jpg'); /* Add a background image */
     background-size: cover;
     background-position: center;
-    color: #0f0e0e; /* Text color for better contrast */
+    color: #fff; /* Text color for better contrast */
 }
 
 .container {
@@ -150,8 +150,7 @@ p {
     }
 }
 
-/* ... (Your existing CSS for navigation bar, global styles, etc.) ... */
-
+/* About Section */
 .about-section {
     padding-top: 100px; /* Adjust for sticky navbar */
     text-align: center; /* Center the content */
@@ -160,6 +159,5 @@ p {
 .about-content {
     max-width: 800px; /* Limit the width of the content */
     margin: 0 auto; 
+    color: #333; /* Set text color to black */
 }
-
-/* ... (Rest of your CSS) ... */
