@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: username/repository-name  # Replace with your GitHub username and repo name
+  branch: main  # Or use another branch if you're using a different one
+
+media_folder: "assets/images"  # Folder to store uploaded images
+public_folder: "/assets/images"  # Public URL to access images
+
+collections:
+  - name: "blog"  # The name of the collection
+    label: "Blog"
+    folder: "posts"  # Folder where blog posts are stored
+    create: true  # Allow creating new posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # URL format for posts
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }  # Image upload field
