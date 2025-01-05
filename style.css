@@ -161,3 +161,62 @@ p {
     margin: 0 auto; 
     color: #333; /* Set text color to black */
 }
+/* ... (Your existing CSS for navigation bar, global styles, etc.) ... */
+
+.contact-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+.social-media a i {
+    margin-right: 5px;
+}
+
+/* ... (Rest of your CSS) ... */
