@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Shelf</title>
+    <title>Book Shelf - Books</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,44 +17,53 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="books.html">Books</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
                 <li><a href="authors.html">Authors</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="home-section">
+        <section id="books" class="books-section">
             <div class="container">
-                <div class="column left">
-                    <h1>Welcome to Book Shelf</h1>
-                    <p>Discover a world of stories, explore diverse genres, and connect with inspiring authors.</p>
-                    <a href="books.html" class="btn">Explore Books</a>
+                <h1>Books</h1>
+                <div class="filters">
+                    <select id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="nonfiction">Nonfiction</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="biography">Biography</option>
+                        <option value="history">History</option>
+                        </select>
+                    <select id="sortOption">
+                        <option value="title">Title (A-Z)</option>
+                        <option value="author">Author (A-Z)</option>
+                        <option value="recent">Recently Added</option>
+                    </select>
                 </div>
-                <div class="column right">
-                    <h2>Latest Posts</h2>
-                    <div class="post-preview">
-                        <a href="post1.html">
-                            <h3>Post Title 1</h3>
-                            <p>Short description of Post 1</p>
-                        </a>
+
+                <div class="book-grid">
+                    <div class="book-card">
+                        <img src="images/book1.jpg" alt="Book 1">
+                        <h3>The Lord of the Rings</h3>
+                        <p>By J.R.R. Tolkien</p>
+                        <p>Genre: Fantasy</p>
+                        <a href="book-details.html?id=1" class="btn">Read More</a> 
+                        <a href="summary.html?book=1" class="btn">Read Summary</a>
                     </div>
-                    <div class="post-preview">
-                        <a href="post2.html">
-                            <h3>Post Title 2</h3>
-                            <p>Short description of Post 2</p>
-                        </a>
+                    <div class="book-card">
+                        <img src="images/book2.jpg" alt="Book 2">
+                        <h3>To Kill a Mockingbird</h3>
+                        <p>By Harper Lee</p>
+                        <p>Genre: Fiction</p>
+                        <a href="book-details.html?id=2" class="btn">Read More</a>
+                        <a href="summary.html?book=2" class="btn">Read Summary</a>
                     </div>
-                    <div class="post-preview">
-                        <a href="post3.html">
-                            <h3>Post Title 3</h3>
-                            <p>Short description of Post 3</p>
-                        </a>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
