@@ -3,56 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Shelf - Home</title>
+    <title>My Blog</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
-        <nav class="navbar"> 
+        <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Book Shelf</a> 
+                <a href="#">My Blog</a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="authors.html">Authors</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-button">☰</button>
         </nav>
     </header>
 
+    <!-- Main Content Section -->
     <main>
-        <section id="home" class="home-section">
-            <h1>Welcome to Book Shelf</h1>
-            <p>Discover a world of stories, explore diverse genres, and connect with inspiring authors.</p>
-            <a href="books.html" class="btn">Explore Books</a>
-        </section> 
+        <section id="blog" class="blog-section">
+            <h2 class="section-title">Latest Posts</h2>
+            <div class="blog-container">
+                <article class="blog-card">
+                    <img src="assets/images/blog1.jpg" alt="Blog 1">
+                    <div class="blog-info">
+                        <h3><a href="posts/post1.html">Exploring New Technologies</a></h3>
+                        <p>This post explores the latest trends in technology...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/blog2.jpg" alt="Blog 2">
+                    <div class="blog-info">
+                        <h3><a href="posts/post2.html">The Future of AI</a></h3>
+                        <p>In this post, we discuss the future applications of AI...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/blog3.jpg" alt="Blog 3">
+                    <div class="blog-info">
+                        <h3><a href="posts/post3.html">Understanding Blockchain</a></h3>
+                        <p>Blockchain is revolutionizing various industries. Learn how...</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="assets/images/blog4.jpg" alt="Blog 4">
+                    <div class="blog-info">
+                        <h3><a href="posts/post4.html">The Rise of Virtual Reality</a></h3>
+                        <p>Virtual reality is shaping the future of entertainment...</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-        <section id="featured"> 
-            <h2>Featured Books</h2>
-            <div class="book-grid">
-                <div class="book-item">
-                    <img src="assets/images/book1.jpg" alt="Book 1">
-                    <h3>The Silent Mind</h3>
-                    <p>By John Doe</p>
-                    <a href="books/book1.html" class="btn">Read More</a>
-                </div>
-                <div class="book-item"> 
-                    <img src="assets/images/book2.jpg" alt="Book 2">
-                    <h3>The Universe Within</h3>
-                    <p>By Jane Smith</p>
-                    <a href="books/book2.html" class="btn">Read More</a>
-                </div>
-                </div>
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Welcome to my blog where I share my thoughts on technology, creativity, and everything in between. Join me as I explore new ideas and inspirations!</p>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Book Shelf. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
