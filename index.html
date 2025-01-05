@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>My Blog</h1>
-            <p>Your daily dose of creative insights</p>
+        <!-- Hero Section -->
+        <div class="hero" data-aos="fade-in">
+            <div class="overlay">
+                <div class="logo">
+                    <h1>My Blog</h1>
+                    <p>Your daily dose of creative insights</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -18,7 +41,7 @@
         <!-- Blog Posts Section -->
         <section id="blog" class="posts">
             <!-- Post 1 -->
-            <article class="post">
+            <article class="post" data-aos="fade-up">
                 <img src="assets/images/blog1.jpg" alt="Blog Post 1">
                 <div class="post-content">
                     <h3 class="post-title">Exploring New Technologies</h3>
@@ -29,7 +52,7 @@
             </article>
 
             <!-- Post 2 -->
-            <article class="post">
+            <article class="post" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/images/blog2.jpg" alt="Blog Post 2">
                 <div class="post-content">
                     <h3 class="post-title">The Future of Artificial Intelligence</h3>
@@ -47,6 +70,11 @@
         <p>&copy; 2025 My Blog. All Rights Reserved.</p>
     </footer>
 
-    <script src="app.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
