@@ -7,51 +7,62 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
-        <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="logo">
-                <h1><a href="#">My Blog</a></h1>
+                <a href="#">My Blog</a>
             </div>
             <ul class="nav-links">
-                <li><a href="#blog">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
         <!-- Hero Section -->
-        <div class="hero-section">
-            <img src="assets/images/hero-bg.jpg" alt="Hero Background" class="hero-bg">
-            <div class="hero-text">
-                <h1>Welcome to My Blog</h1>
-                <p>Your daily dose of creative insights</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Creative Blog</h1>
+                <p>Your daily dose of insights, inspiration, and more</p>
+                <a href="#blog" class="cta-btn">Read Blog</a>
             </div>
-        </div>
+        </section>
     </header>
-    
+
+    <!-- Main Content Section -->
     <main>
-        <section id="blog">
+        <section id="blog" class="blog-section">
+            <h2 class="section-title">Latest Posts</h2>
             <div class="blog-container">
                 <article class="blog-card">
                     <img src="assets/images/blog1.jpg" alt="Blog 1">
-                    <div class="blog-content">
-                        <h2><a href="posts/post1.html">Exploring New Technologies</a></h2>
+                    <div class="blog-info">
+                        <h3><a href="posts/post1.html">Exploring New Technologies</a></h3>
                         <p>This post explores the latest trends in technology...</p>
                     </div>
                 </article>
                 <article class="blog-card">
                     <img src="assets/images/blog2.jpg" alt="Blog 2">
-                    <div class="blog-content">
-                        <h2><a href="posts/post2.html">The Future of AI</a></h2>
+                    <div class="blog-info">
+                        <h3><a href="posts/post2.html">The Future of AI</a></h3>
                         <p>In this post, we discuss the future applications of AI...</p>
                     </div>
                 </article>
             </div>
         </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Welcome to my blog where I share my thoughts on technology, creativity, and everything in between. Join me as I explore new ideas and inspirations!</p>
+        </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 My Blog. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="app.js"></script>
