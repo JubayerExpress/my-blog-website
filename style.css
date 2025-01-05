@@ -15,10 +15,6 @@ body {
     scroll-behavior: smooth;
 }
 
-a:focus, button:focus {
-    outline: 3px solid #4CAF50;
-}
-
 /* Header - Hero Section */
 header {
     position: relative;
