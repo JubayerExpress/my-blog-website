@@ -3,63 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books - Book Shelf</title>
+    <title>Book Shelf</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">Book Shelf</a>
+                <a href="#">Book Shelf</a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="authors.html">Authors</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#authors">Authors</a></li>
             </ul>
-            <button class="menu-button">☰</button> <!-- Mobile menu toggle button -->
-        </nav>
+            <button class="menu-button">☰</button> </nav>
     </header>
 
-    <!-- Main Content Section -->
     <main>
+        <section id="home" class="home-section">
+            <h2 class="section-title">Welcome to Book Shelf</h2>
+            <p>Welcome to Book Shelf, your one-stop shop for exploring the world of literature. Here, you'll find a diverse collection of books across various genres and categories. Dive into captivating stories, broaden your knowledge, and discover new favorites!</p>
+        </section>
+
         <section id="books" class="books-section">
-            <h2 class="section-title">Books</h2>
-            <div class="filters">
-                <a href="genre/fiction.html">Fiction</a> | 
-                <a href="genre/non-fiction.html">Non-fiction</a> | 
-                <a href="genre/science.html">Science</a> |
-                <a href="genre/philosophy.html">Philosophy</a>
-            </div>
-            <div class="book-container">
-                <article class="book-card">
-                    <img src="assets/images/book1.jpg" alt="Book 1">
-                    <div class="book-info">
-                        <h3 class="book-title"><a href="books/book1.html">The Silent Mind</a></h3>
-                        <p>Discover the quiet power of meditation and mindfulness...</p>
-                    </div>
-                </article>
-                <article class="book-card">
-                    <img src="assets/images/book2.jpg" alt="Book 2">
-                    <div class="book-info">
-                        <h3 class="book-title"><a href="books/book2.html">The Universe Within</a></h3>
-                        <p>A deep dive into the workings of the universe...</p>
-                    </div>
-                </article>
+            <h2>Explore Our Books</h2>
+            <div class="books-container">
+                <div class="book-category">
+                    <h3>Genres</h3>
+                    <ul>
+                        <li><a href="#">Fiction</a></li>
+                        <li><a href="#">Non-Fiction</a></li>
+                        <li><a href="#">Mystery</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Science Fiction</a></li>
+                        </ul>
+                </div>
+                <div class="book-category">
+                    <h3>Book Types</h3>
+                    <ul>
+                        <li><a href="#">Novels</a></li>
+                        <li><a href="#">Short Stories</a></li>
+                        <li><a href="#">Poetry Collections</a></li>
+                        <li><a href="#">Biographies</a></li>
+                        <li><a href="#">Self-Help Books</a></li>
+                        </ul>
+                </div>
             </div>
         </section>
-    </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Book Shelf. All rights reserved.</p>
-        </div>
-    </footer>
+        <section id="authors" class="authors-section">
+            <h2>Meet the Authors</h2>
+            <p>Get to know the talented minds behind your favorite books.</p>
+            </section>
 
-    <script src="app.js"></script>
-</body>
-</html>
+        <section id="blog" class="blog-section">
+            <h2 class="section-title">Latest Posts</h2>
