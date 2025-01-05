@@ -1,6 +1,6 @@
 const genreFilter = document.getElementById('genreFilter');
 const sortOption = document.getElementById('sortOption');
-const bookGrid = document.querySelector('.book-grid');
+const bookGrid = document.querySelector('.book-grid'); 
 
 // Sample book data (replace with your actual data)
 const books = [
