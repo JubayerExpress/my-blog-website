@@ -151,18 +151,8 @@ p {
 }
 
 /* About Section */
-.about-section {
-    padding-top: 100px; /* Adjust for sticky navbar */
-    text-align: center; /* Center the content */
-}
+/* ... (Your existing CSS) ... */
 
-.about-content {
-    max-width: 800px; /* Limit the width of the content */
-    margin: 0 auto; 
-    color: #333; /* Set text color to black */
-}
-
-/* Contact Section */
 .contact-section {
     padding-top: 100px;
     text-align: center;
@@ -176,6 +166,7 @@ p {
 form {
     max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 30px; 
 }
 
 .form-group {
@@ -206,15 +197,25 @@ button[type="submit"] {
 }
 
 .social-media {
-    margin-top: 30px;
+    text-align: center; /* Center social media icons */
+}
+
+.social-media-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.social-media-list li {
+    margin-right: 20px; 
 }
 
 .social-media a {
     text-decoration: none;
     color: #333; 
-    margin-right: 20px;
+    font-size: 1.5rem; /* Increase icon size */
 }
 
-.social-media a i {
-    margin-right: 5px;
-}
+/* ... (Rest of your CSS) ... */
