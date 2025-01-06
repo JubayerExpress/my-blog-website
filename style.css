@@ -301,35 +301,32 @@ button[type="submit"] {
 }
 /* ... (Your existing CSS) ... */
 
-/* ... (Your existing CSS) ... */
-
-.books-section {
-    padding-top: 100px;
-}
-
-.filters {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between; 
-}
-
+/* Container for the book grid */
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax value as needed */ 
-    grid-gap: 20px; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as necessary */
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.book-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+/* Book item styles */
+.book-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.book-card img {
-    max-width: 150px;
-    margin-bottom: 15px;
+/* Book title and author styles */
+.book-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-/* ... (Rest of your CSS) ... */
+.book-item p {
+    font-size: 1em;
+    color: #555;
+}
+
 
