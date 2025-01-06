@@ -3,156 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Shelf - Books</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Float four columns side by side */
-        .column {
-            float: left;
-            width: 25%;
-            padding: 0 10px;
-        }
-
-        /* Remove extra left and right margins, due to padding */
-        .row {
-            margin: 0 -5px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive columns */
-        @media screen and (max-width: 600px) {
-            .column {
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Style the counter cards */
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            text-align: center;
-            background-color: #f1f1f1;
-        }
-    </style>
+    <title>Book Display</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">Book Shelf</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="books.html" class="active">Books</a></li>
-                <li><a href="authors.html">Authors</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="header">
+        <h1>Book Collection</h1>
+        <div class="filter">
+            <label for="sort">Sort by: </label>
+            <select id="sort">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="year">Year</option>
+            </select>
+        </div>
+    </div>
 
-    <main>
-        <section id="books" class="books-section">
-            <div class="container">
-                <h1>Books</h1>
-                <div class="filters">
-                    <select id="genreFilter">
-                        <option value="all">All Genres</option>
-                        <option value="fiction">Fiction</option>
-                        <option value="nonfiction">Nonfiction</option>
-                        <option value="poetry">Poetry</option>
-                        <option value="biography">Biography</option>
-                        <option value="history">History</option>
-                    </select>
-                    <select id="sortOption">
-                        <option value="title">Title (A-Z)</option>
-                        <option value="author">Author (A-Z)</option>
-                        <option value="recent">Recently Added</option>
-                    </select>
-                </div>
+    <div class="book-container" id="book-container">
+        <!-- Book cards will be inserted here -->
+    </div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 1</h3>
-                            <p>Author 1</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 2</h3>
-                            <p>Author 2</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 3</h3>
-                            <p>Author 3</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 4</h3>
-                            <p>Author 4</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 5</h3>
-                            <p>Author 5</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 6</h3>
-                            <p>Author 6</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 7</h3>
-                            <p>Author 7</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 8</h3>
-                            <p>Author 8</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Book 9</h3>
-                            <p>Author 9</p>
-                        </div>
-                    </div>
-                    <!-- Add more books as needed -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Book Shelf. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
