@@ -51,8 +51,6 @@ body {
     color: #ff6347;
 }
 
-/* Remove menu-button related styles */ 
-
 /* Home Section */
 .home-section {
     padding-top: 100px; /* Adjust for sticky navbar */
@@ -138,8 +136,6 @@ p {
         display: flex; 
     }
 
-    /* Remove menu-button related styles */ 
-
     .home-section {
         text-align: center; 
         padding-top: 80px; 
@@ -215,9 +211,7 @@ form {
     margin-bottom: 30px; 
 }
 
-
-/* ... (Your existing CSS) ... */
-
+/* Authors Section */
 .authors-section {
     padding-top: 100px;
     text-align: center;
@@ -244,12 +238,13 @@ form {
     margin-bottom: 10px;
 }
 
+/* Author Details Section */
 .author-details-section {
     padding-top: 100px;
     text-align: center;
 }
 
-/* ... (Rest of your CSS) ... */
+/* Form Styles */
 .form-group {
     margin-bottom: 20px;
 }
@@ -277,6 +272,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+/* Social Media Section */
 .social-media {
     text-align: center; /* Center social media icons */
     margin-top: 30px; 
@@ -299,9 +295,8 @@ button[type="submit"] {
     color: #333; 
     font-size: 1.5rem; /* Increase icon size */
 }
-/* ... (Your existing CSS) ... */
 
-/* Container for the book grid */
+/* Book Grid Section */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as necessary */
@@ -309,7 +304,7 @@ button[type="submit"] {
     margin-top: 20px;
 }
 
-/* Book item styles */
+/* Book Item Styles */
 .book-item {
     background-color: #f9f9f9;
     padding: 15px;
@@ -318,7 +313,7 @@ button[type="submit"] {
     text-align: center;
 }
 
-/* Book title and author styles */
+/* Book Title and Author Styles */
 .book-item h3 {
     font-size: 1.2em;
     margin: 10px 0;
@@ -328,5 +323,3 @@ button[type="submit"] {
     font-size: 1em;
     color: #555;
 }
-
-
