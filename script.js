@@ -1,91 +1,65 @@
-const books = [
-    {
-        title: 'The Great Gatsby',
-        author: 'F. Scott Fitzgerald',
-        year: 1925,
-        cover: 'https://example.com/gatsby.jpg',
-        summary: 'A story about the mysterious Jay Gatsby and his unrequited love for Daisy Buchanan.'
-    },
-    {
-        title: '1984',
-        author: 'George Orwell',
-        year: 1949,
-        cover: 'https://example.com/1984.jpg',
-        summary: 'A dystopian novel set in a totalitarian regime where surveillance and control are pervasive.'
-    },
-    // Add more books here
-];
+// Function to update the book grid
+function updateBookGrid(books) {
+  bookGrid.innerHTML = ''; // Clear the existing grid
 
-const bookContainer = document.getElementById('book-container');
-const sortSelect = document.getElementById('sort');
-let filteredBooks = [...books];
+  books.forEach(book => {
+    const card = document.createElement('div');
+    card.classList.add('book-card');
 
-function displayBooks() {
-    bookContainer.innerHTML = '';
+    // Book image
+    const imgWrapper = document.createElement('div');
+    imgWrapper.classList.add('book-img-wrapper');
+    const img = document.createElement('img');
+    img.src = book.image;
+    img.alt = book.title;
+    img.classList.add('book-img');
+    imgWrapper.appendChild(img);
 
-    filteredBooks.forEach(book => {
-        const card = document.createElement('div');
-        card.classList.add('book-card');
+    // Book content container
+    const contentWrapper = document.createElement('div');
+    contentWrapper.classList.add('book-content');
 
-        const bookImg = document.createElement('img');
-        bookImg.src = book.cover;
-        card.appendChild(bookImg);
+    // Title of the book
+    const title = document.createElement('h3');
+    title.textContent = book.title;
+    contentWrapper.appendChild(title);
 
-        const bookTitle = document.createElement('h3');
-        bookTitle.textContent = book.title;
-        card.appendChild(bookTitle);
+    // Author link
+    const authorLink = document.createElement('a');
+    authorLink.href = book.authorPage;
+    authorLink.textContent = book.author;
+    authorLink.classList.add('author-link');
+    contentWrapper.appendChild(authorLink);
 
-        const bookAuthor = document.createElement('p');
-        bookAuthor.textContent = `by ${book.author}`;
-        card.appendChild(bookAuthor);
+    // Genre of the book
+    const genre = document.createElement('p');
+    genre.textContent = `Genre: ${book.genre}`;
+    genre.classList.add('book-genre');
+    contentWrapper.appendChild(genre);
 
-        const summaryBtn = document.createElement('button');
-        summaryBtn.textContent = 'Read Summary';
-        summaryBtn.classList.add('summary-btn');
-        card.appendChild(summaryBtn);
+    // Buttons for more actions
+    const buttonWrapper = document.createElement('div');
+    buttonWrapper.classList.add('button-wrapper');
 
-        summaryBtn.addEventListener('click', () => showSummaryModal(book.summary));
+    const readMoreBtn = document.createElement('a');
+    readMoreBtn.href = `book-details.html?id=${book.id}`;
+    readMoreBtn.classList.add('btn', 'read-more-btn');
+    readMoreBtn.textContent = 'Read More';
 
-        bookContainer.appendChild(card);
-    });
+    const readSummaryBtn = document.createElement('a');
+    readSummaryBtn.href = `summary.html?book=${book.id}`;
+    readSummaryBtn.classList.add('btn', 'read-summary-btn');
+    readSummaryBtn.textContent = 'Read Summary';
+
+    buttonWrapper.appendChild(readMoreBtn);
+    buttonWrapper.appendChild(readSummaryBtn);
+    contentWrapper.appendChild(buttonWrapper);
+
+    // Append the image and content wrapper to the card
+    card.appendChild(imgWrapper);
+    card.appendChild(contentWrapper);
+
+    // Append the card to the grid
+    bookGrid.appendChild(card);
+  });
 }
-
-function showSummaryModal(summary) {
-    const modal = document.createElement('div');
-    modal.classList.add('summary-modal');
-
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-
-    const modalText = document.createElement('p');
-    modalText.textContent = summary;
-    modalContent.appendChild(modalText);
-
-    const closeBtn = document.createElement('button');
-    closeBtn.textContent = 'Close';
-    closeBtn.classList.add('close-btn');
-    modalContent.appendChild(closeBtn);
-
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
-
-    closeBtn.addEventListener('click', () => {
-        modal.remove();
-    });
-}
-
-sortSelect.addEventListener('change', () => {
-    const sortBy = sortSelect.value;
-
-    if (sortBy === 'title') {
-        filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortBy === 'author') {
-        filteredBooks.sort((a, b) => a.author.localeCompare(b.author));
-    } else if (sortBy === 'year') {
-        filteredBooks.sort((a, b) => a.year - b.year);
-    }
-
-    displayBooks();
-});
-
-displayBooks();
