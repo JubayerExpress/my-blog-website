@@ -1,236 +1,30 @@
-const genreFilter = document.getElementById('genreFilter');
-const sortOption = document.getElementById('sortOption');
-const bookGrid = document.querySelector('.book-grid'); 
+// DOM Elements (for interacting with the HTML)
+const genreFilter = document.getElementById('genreFilter'); // Selects the genre filter dropdown
+const sortOption = document.getElementById('sortOption'); // Selects the sort option dropdown
+const bookGrid = document.querySelector('.book-grid'); // Selects the book grid container
 
 // Sample book data (replace with your actual data)
 const books = [
-    { 
-        id: 1, 
-        title: "The Lord of the Rings", 
-        author: "J.R.R. Tolkien", 
-        genre: "Fantasy", 
-        image: "images/book1.jpg", 
-        summary: "A long and complex epic...", 
-        authorPage: "author-details.html?id=1" 
-    },
-    { 
-        id: 2, 
-        title: "To Kill a Mockingbird", 
-        author: "Harper Lee", 
-        genre: "Fiction", 
-        image: "images/book2.jpg", 
-        summary: "A classic novel about racial injustice...", 
-        authorPage: "author-details.html?id=2" 
-    },
-    { 
-        id: 3, 
-        title: "1984", 
-        author: "George Orwell", 
-        genre: "Science Fiction", 
-        image: "images/book3.jpg", 
-        summary: "A dystopian novel about totalitarian control...", 
-        authorPage: "author-details.html?id=3" 
-    },
-    { 
-        id: 4, 
-        title: "Pride and Prejudice", 
-        author: "Jane Austen", 
-        genre: "Romance", 
-        image: "images/book4.jpg", 
-        summary: "A timeless story of love and social class...", 
-        authorPage: "author-details.html?id=4" 
-    },
-    { 
-        id: 5, 
-        title: "The Catcher in the Rye", 
-        author: "J.D. Salinger", 
-        genre: "Fiction", 
-        image: "images/book5.jpg", 
-        summary: "A coming-of-age story about alienation...", 
-        authorPage: "author-details.html?id=5" 
-    },
-    { 
-        id: 6, 
-        title: "The Hobbit", 
-        author: "J.R.R. Tolkien", 
-        genre: "Fantasy", 
-        image: "images/book6.jpg", 
-        summary: "A classic adventure story...", 
-        authorPage: "author-details.html?id=1" 
-    },
-    { 
-        id: 7, 
-        title: "The Alchemist", 
-        author: "Paulo Coelho", 
-        genre: "Fiction", 
-        image: "images/book7.jpg", 
-        summary: "A philosophical novel about following your dreams...", 
-        authorPage: "author-details.html?id=6" 
-    },
-    { 
-        id: 8, 
-        title: "The Picture of Dorian Gray", 
-        author: "Oscar Wilde", 
-        genre: "Gothic", 
-        image: "images/book8.jpg", 
-        summary: "A chilling story about the dangers of vanity...", 
-        authorPage: "author-details.html?id=7" 
-    },
-    { 
-        id: 9, 
-        title: "The Adventures of Huckleberry Finn", 
-        author: "Mark Twain", 
-        genre: "Adventure", 
-        image: "images/book9.jpg", 
-        summary: "A classic American novel about freedom and friendship...", 
-        authorPage: "author-details.html?id=8" 
-    },
-    { 
-        id: 10, 
-        title: "The Count of Monte Cristo", 
-        author: "Alexandre Dumas", 
-        genre: "Adventure", 
-        image: "images/book10.jpg", 
-        summary: "A tale of revenge and redemption...", 
-        authorPage: "author-details.html?id=9" 
-    },
-    { 
-        id: 11, 
-        title: "Moby Dick", 
-        author: "Herman Melville", 
-        genre: "Adventure", 
-        image: "images/book11.jpg", 
-        summary: "A classic tale of obsession and the sea...", 
-        authorPage: "author-details.html?id=10" 
-    },
-    { 
-        id: 12, 
-        title: "The Great Gatsby", 
-        author: "F. Scott Fitzgerald", 
-        genre: "Fiction", 
-        image: "images/book12.jpg", 
-        summary: "A poignant exploration of the American Dream...", 
-        authorPage: "author-details.html?id=11" 
-    },
-    { 
-        id: 13, 
-        title: "Wuthering Heights", 
-        author: "Emily Brontë", 
-        genre: "Gothic", 
-        image: "images/book13.jpg", 
-        summary: "A passionate and tragic love story...", 
-        authorPage: "author-details.html?id=12" 
-    },
-    { 
-        id: 14, 
-        title: "The Catcher in the Rye", 
-        author: "J.D. Salinger", 
-        genre: "Fiction", 
-        image: "images/book14.jpg", 
-        summary: "A coming-of-age story about alienation...", 
-        authorPage: "author-details.html?id=13" 
-    },
-    { 
-        id: 15, 
-        title: "The Hobbit", 
-        author: "J.R.R. Tolkien", 
-        genre: "Fantasy", 
-        image: "images/book15.jpg", 
-        summary: "A classic adventure story...", 
-        authorPage: "author-details.html?id=14" 
-    },
-    { 
-        id: 16, 
-        title: "The Alchemist", 
-        author: "Paulo Coelho", 
-        genre: "Fiction", 
-        image: "images/book16.jpg", 
-        summary: "A philosophical novel about following your dreams...", 
-        authorPage: "author-details.html?id=15" 
-    },
-    { 
-        id: 17, 
-        title: "The Picture of Dorian Gray", 
-        author: "Oscar Wilde", 
-        genre: "Gothic", 
-        image: "images/book17.jpg", 
-        summary: "A chilling story about the dangers of vanity...", 
-        authorPage: "author-details.html?id=16" 
-    },
-    { 
-        id: 18, 
-        title: "The Adventures of Huckleberry Finn", 
-        author: "Mark Twain", 
-        genre: "Adventure", 
-        image: "images/book18.jpg", 
-        summary: "A classic American novel about freedom and friendship...", 
-        authorPage: "author-details.html?id=17" 
-    },
-    { 
-        id: 19, 
-        title: "The Count of Monte Cristo", 
-        author: "Alexandre Dumas", 
-        genre: "Adventure", 
-        image: "images/book19.jpg", 
-        summary: "A tale of revenge and redemption...", 
-        authorPage: "author-details.html?id=18" 
-    },
-    { 
-        id: 20, 
-        title: "Moby Dick", 
-        author: "Herman Melville", 
-        genre: "Adventure", 
-        image: "images/book20.jpg", 
-        summary: "A classic tale of obsession and the sea...", 
-        authorPage: "author-details.html?id=19" 
-    },
-    { 
-        id: 21, 
-        title: "The Great Gatsby", 
-        author: "F. Scott Fitzgerald", 
-        genre: "Fiction", 
-        image: "images/book21.jpg", 
-        summary: "A poignant exploration of the American Dream...", 
-        authorPage: "author-details.html?id=20" 
-    },
-    { 
-        id: 22, 
-        title: "Wuthering Heights", 
-        author: "Emily Brontë", 
-        genre: "Gothic", 
-        image: "images/book22.jpg", 
-        summary: "A passionate and tragic love story...", 
-        authorPage: "author-details.html?id=21" 
-    },
-    { 
-        id: 2, 
-        title: "To Kill a Mockingbird", 
-        author: "Harper Lee", 
-        genre: "Fiction", 
-        image: "images/book2.jpg", 
-        summary: "A classic novel about racial injustice...", 
-        authorPage: "author-details.html?id=2" 
-    },
-    // ... more books
+    // List of book objects with properties such as id, title, author, genre, image, etc.
 ];
 
 // Function to filter and sort books
 function filterAndSortBooks() {
-  const selectedGenre = genreFilter.value;
-  const selectedSort = sortOption.value;
+  const selectedGenre = genreFilter.value; // Get the selected genre from the filter
+  const selectedSort = sortOption.value; // Get the selected sorting option
 
-  let filteredBooks = books.slice(); // Create a copy to avoid modifying original data
+  let filteredBooks = books.slice(); // Create a copy of the books array to avoid modifying original data
 
   if (selectedGenre !== 'all') {
-    filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre);
+    filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre); // Filter books by genre
   }
 
   if (selectedSort === 'title') {
-    filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+    filteredBooks.sort((a, b) => a.title.localeCompare(b.title)); // Sort books by title
   } else if (selectedSort === 'author') {
-    filteredBooks.sort((a, b) => a.author.localeCompare(b.author));
+    filteredBooks.sort((a, b) => a.author.localeCompare(b.author)); // Sort books by author
   } else if (selectedSort === 'recent') {
-    // Assuming you have a `date` property in each book object for recent sorting
+    // Sort books by date if a date property exists (you would need to modify the book objects)
     filteredBooks.sort((a, b) => new Date(b.date) - new Date(a.date));
   }
 
@@ -238,38 +32,40 @@ function filterAndSortBooks() {
   updateBookGrid(filteredBooks);
 }
 
-// Function to update the book grid
+// Function to update the book grid with book cards
 function updateBookGrid(books) {
-  bookGrid.innerHTML = '';
+  bookGrid.innerHTML = ''; // Clear the existing book grid content
 
   books.forEach(book => {
+    // Create a new book card with details such as image, title, author, and genre
     const card = document.createElement('div');
-    card.classList.add('book-card');
+    card.classList.add('book-card'); // Add a class for styling
 
-    const img = document.createElement('img');
+    const img = document.createElement('img'); // Image element for book cover
     img.src = book.image;
     img.alt = book.title;
 
-    const title = document.createElement('h3');
+    const title = document.createElement('h3'); // Title element
     title.textContent = book.title;
 
-    const authorLink = document.createElement('a');
+    const authorLink = document.createElement('a'); // Author link element
     authorLink.href = book.authorPage;
     authorLink.textContent = book.author;
 
-    const genre = document.createElement('p');
+    const genre = document.createElement('p'); // Genre text element
     genre.textContent = `Genre: ${book.genre}`;
 
-    const readMoreBtn = document.createElement('a');
+    const readMoreBtn = document.createElement('a'); // "Read More" button
     readMoreBtn.href = `book-details.html?id=${book.id}`;
     readMoreBtn.classList.add('btn');
     readMoreBtn.textContent = 'Read More';
 
-    const readSummaryBtn = document.createElement('a');
+    const readSummaryBtn = document.createElement('a'); // "Read Summary" button
     readSummaryBtn.href = `summary.html?book=${book.id}`;
     readSummaryBtn.classList.add('btn');
     readSummaryBtn.textContent = 'Read Summary';
 
+    // Append all elements to the card and then the card to the grid
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(authorLink);
@@ -277,16 +73,16 @@ function updateBookGrid(books) {
     card.appendChild(readMoreBtn);
     card.appendChild(readSummaryBtn);
 
-    bookGrid.appendChild(card);
+    bookGrid.appendChild(card); // Append the card to the grid
   });
 }
 
-// Add sorting by recently added
+// Add sorting by recently added (extra option)
 sortOption.innerHTML += '<option value="recent">Recently Added</option>';
 
-// Initial load
+// Initial load: call the function to display the books
 filterAndSortBooks();
 
-// Event listeners
+// Event listeners: trigger the filtering and sorting when the user selects a genre or sort option
 genreFilter.addEventListener('change', filterAndSortBooks);
 sortOption.addEventListener('change', filterAndSortBooks);
