@@ -297,6 +297,7 @@ button[type="submit"] {
 }
 
 /* Book Grid Section */
+
 * {
     margin: 0;
     padding: 0;
@@ -402,4 +403,3 @@ h1 {
     cursor: pointer;
 }
 
-}
