@@ -1,88 +1,91 @@
-// DOM Elements (for interacting with the HTML)
-const genreFilter = document.getElementById('genreFilter'); // Selects the genre filter dropdown
-const sortOption = document.getElementById('sortOption'); // Selects the sort option dropdown
-const bookGrid = document.querySelector('.book-grid'); // Selects the book grid container
-
-// Sample book data (replace with your actual data)
 const books = [
-    // List of book objects with properties such as id, title, author, genre, image, etc.
+    {
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        year: 1925,
+        cover: 'https://example.com/gatsby.jpg',
+        summary: 'A story about the mysterious Jay Gatsby and his unrequited love for Daisy Buchanan.'
+    },
+    {
+        title: '1984',
+        author: 'George Orwell',
+        year: 1949,
+        cover: 'https://example.com/1984.jpg',
+        summary: 'A dystopian novel set in a totalitarian regime where surveillance and control are pervasive.'
+    },
+    // Add more books here
 ];
 
-// Function to filter and sort books
-function filterAndSortBooks() {
-  const selectedGenre = genreFilter.value; // Get the selected genre from the filter
-  const selectedSort = sortOption.value; // Get the selected sorting option
+const bookContainer = document.getElementById('book-container');
+const sortSelect = document.getElementById('sort');
+let filteredBooks = [...books];
 
-  let filteredBooks = books.slice(); // Create a copy of the books array to avoid modifying original data
+function displayBooks() {
+    bookContainer.innerHTML = '';
 
-  if (selectedGenre !== 'all') {
-    filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre); // Filter books by genre
-  }
+    filteredBooks.forEach(book => {
+        const card = document.createElement('div');
+        card.classList.add('book-card');
 
-  if (selectedSort === 'title') {
-    filteredBooks.sort((a, b) => a.title.localeCompare(b.title)); // Sort books by title
-  } else if (selectedSort === 'author') {
-    filteredBooks.sort((a, b) => a.author.localeCompare(b.author)); // Sort books by author
-  } else if (selectedSort === 'recent') {
-    // Sort books by date if a date property exists (you would need to modify the book objects)
-    filteredBooks.sort((a, b) => new Date(b.date) - new Date(a.date));
-  }
+        const bookImg = document.createElement('img');
+        bookImg.src = book.cover;
+        card.appendChild(bookImg);
 
-  // Update the UI with filtered and sorted books
-  updateBookGrid(filteredBooks);
+        const bookTitle = document.createElement('h3');
+        bookTitle.textContent = book.title;
+        card.appendChild(bookTitle);
+
+        const bookAuthor = document.createElement('p');
+        bookAuthor.textContent = `by ${book.author}`;
+        card.appendChild(bookAuthor);
+
+        const summaryBtn = document.createElement('button');
+        summaryBtn.textContent = 'Read Summary';
+        summaryBtn.classList.add('summary-btn');
+        card.appendChild(summaryBtn);
+
+        summaryBtn.addEventListener('click', () => showSummaryModal(book.summary));
+
+        bookContainer.appendChild(card);
+    });
 }
 
-// Function to update the book grid with book cards
-function updateBookGrid(books) {
-  bookGrid.innerHTML = ''; // Clear the existing book grid content
+function showSummaryModal(summary) {
+    const modal = document.createElement('div');
+    modal.classList.add('summary-modal');
 
-  books.forEach(book => {
-    // Create a new book card with details such as image, title, author, and genre
-    const card = document.createElement('div');
-    card.classList.add('book-card'); // Add a class for styling
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
 
-    const img = document.createElement('img'); // Image element for book cover
-    img.src = book.image;
-    img.alt = book.title;
+    const modalText = document.createElement('p');
+    modalText.textContent = summary;
+    modalContent.appendChild(modalText);
 
-    const title = document.createElement('h3'); // Title element
-    title.textContent = book.title;
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Close';
+    closeBtn.classList.add('close-btn');
+    modalContent.appendChild(closeBtn);
 
-    const authorLink = document.createElement('a'); // Author link element
-    authorLink.href = book.authorPage;
-    authorLink.textContent = book.author;
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
 
-    const genre = document.createElement('p'); // Genre text element
-    genre.textContent = `Genre: ${book.genre}`;
-
-    const readMoreBtn = document.createElement('a'); // "Read More" button
-    readMoreBtn.href = `book-details.html?id=${book.id}`;
-    readMoreBtn.classList.add('btn');
-    readMoreBtn.textContent = 'Read More';
-
-    const readSummaryBtn = document.createElement('a'); // "Read Summary" button
-    readSummaryBtn.href = `summary.html?book=${book.id}`;
-    readSummaryBtn.classList.add('btn');
-    readSummaryBtn.textContent = 'Read Summary';
-
-    // Append all elements to the card and then the card to the grid
-    card.appendChild(img);
-    card.appendChild(title);
-    card.appendChild(authorLink);
-    card.appendChild(genre);
-    card.appendChild(readMoreBtn);
-    card.appendChild(readSummaryBtn);
-
-    bookGrid.appendChild(card); // Append the card to the grid
-  });
+    closeBtn.addEventListener('click', () => {
+        modal.remove();
+    });
 }
 
-// Add sorting by recently added (extra option)
-sortOption.innerHTML += '<option value="recent">Recently Added</option>';
+sortSelect.addEventListener('change', () => {
+    const sortBy = sortSelect.value;
 
-// Initial load: call the function to display the books
-filterAndSortBooks();
+    if (sortBy === 'title') {
+        filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortBy === 'author') {
+        filteredBooks.sort((a, b) => a.author.localeCompare(b.author));
+    } else if (sortBy === 'year') {
+        filteredBooks.sort((a, b) => a.year - b.year);
+    }
 
-// Event listeners: trigger the filtering and sorting when the user selects a genre or sort option
-genreFilter.addEventListener('change', filterAndSortBooks);
-sortOption.addEventListener('change', filterAndSortBooks);
+    displayBooks();
+});
+
+displayBooks();
